@@ -1,0 +1,87 @@
+/* post.css */
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2; /* Light gray background */
+    color: #333; /* Dark gray text color */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Container styles */
+.container {
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Full height of the viewport */
+}
+
+/* Form styles */
+form {
+    background-color: white; /* White background color */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    width: 70%; /* Set the width of the form */
+    max-width: 500px; /* Maximum width of the form */
+}
+
+/* Title styles */
+.title {
+    margin-bottom: 20px; /* Add some space below */
+}
+
+.title h1 {
+    color: black; /* Blue text color */
+}
+
+/* Message styles */
+.message {
+    margin-bottom: 20px; /* Add some space below */
+}
+
+.message h1 {
+    color: black; /* Blue text color */
+}
+
+/* Categories styles */
+.categories {
+    margin-bottom: 20px; /* Add some space below */
+}
+
+.categories h1 {
+    color: black; /* Blue text color */
+}
+
+/* Input styles */
+input[type="text"],
+textarea,
+select {
+    width: 100%; /* Make input fields full width */
+    padding: 10px; /* Add padding */
+    margin-bottom: 20px; /* Add some space below */
+    resize: none;
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+textarea {
+    height: 110px;
+}
+
+/* Submit button styles */
+input[type="submit"] {
+    width: 100%; /* Make button full width */
+    padding: 10px; /* Add padding */
+    background-color: #4F46E5; /* Blue background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Add pointer cursor on hover */
+}
+
+input[type="submit"]:hover {
+    background-color: #4F46E5; /* Darker blue on hover */
+}

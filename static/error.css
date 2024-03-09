@@ -1,0 +1,51 @@
+.not-found {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 767px;
+    width: 100%;
+    line-height: 1.4;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: auto;
+    width: 400px;
+    margin-top: 15px;
+}
+
+.not-found h1 {
+    font-family: montserrat, sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color:  #4F46E5;
+    text-transform: uppercase;
+    text-shadow: 0 2px 0 #fff;
+    letter-spacing: 10px;
+    margin: 0;
+}
+
+.glow-on-hover {
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color:  #4F46E5;
+    background: black;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 15px;
+    font-family: montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.glow-on-hover:before {
+    content: "";
+    background: linear-gradient(45deg,);
+}

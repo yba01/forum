@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/error.css" />
+    <title>Page {{ .Code }}</title>
+  </head>
+  <body>
+    <div class="not-found">
+      <div style="margin-bottom: 15px">
+        {{if eq .Code 404 }}
+        <img src="/static/img/404.png" alt="error" />
+        <h1>{{.Mess}}</h1>
+        <br />
+        <a href="/">
+          <button class="glow-on-hover" type="button">GO BACK HOME</button>
+        </a>
+        {{end}} {{if eq .Code 403 }}
+        <img src="/static/img/403.png" alt="error" />
+        <h1>{{.Mess}}</h1>
+        <br />
+        <a href="/">
+          <button class="glow-on-hover" type="button">GO BACK HOME</button>
+        </a>
+        {{end}} {{if eq .Code 400 }}
+        <img src="/static/img/400.png" alt="error" />
+        <h1>{{.Mess}}</h1>
+        <br />
+        <a href="/">
+          <button class="glow-on-hover" type="button">GO BACK HOME</button>
+        </a>
+        {{end}} {{if eq .Code 405 }}
+        <img src="/static/img/405.png" alt="error" />
+        <h1>{{.Mess}}</h1>
+        <br />
+        <a href="/">
+          <button class="glow-on-hover" type="button">GO BACK HOME</button>
+        </a>
+        {{end}} {{if eq .Code (500)}}
+        <img src="/static/img/500.png" alt="error" />
+        <h1>{{.Mess}}</h1>
+        {{end}}
+      </div>
+    </div>
+  </body>
+</html>

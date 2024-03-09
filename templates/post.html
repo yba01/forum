@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/post.css">
+    <title>Post</title>
+</head>
+<body>
+    <div class="container">
+        <form action="/postSubmit" method="post">
+            <div class="title">
+                <h1>Your subject: </h1>
+                <input type="text" name="subject" required>
+            </div>
+            <div class="message">
+                <h1>Your Post: </h1>
+                <textarea name="Thepost" required></textarea>
+            </div>
+            <div class="categories">
+                <h1>Category: </h1>
+                    {{range $key, $value := .}}
+                    <input type="checkbox" name="category" value="{{$key}}">{{$value}}</option>
+                    {{end}}
+            </div>
+            <input type="submit" value="Post">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,326 @@
+/* foruminfo.css */
+
+/* Body styles */
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-size: cover;
+    background-color: #4F46E5;
+}
+
+/* Container styles */
+.container {
+    max-width: 100%;
+    /* Limit width of the container */
+    margin: 0 auto;
+    /* Center the container */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.fa-user {
+    content: url(../static/svg/forum.svg);
+    width: 50px;
+}
+
+.fa-usericon {
+    content: url(../static/svg/user.svg);
+    width: 15px;
+}
+
+.fa-comments {
+    content: url(../static/svg/comments.svg);
+    width: 35px;
+}
+
+/* Navigation styles */
+.btn {
+    height: 35px;
+    background: #4F46E5;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .3s;
+    margin-top: 10px;
+    padding: 0px 10px;
+}
+
+.btn-log {
+    background: white;
+    color: black;
+}
+
+.btn:hover {
+    opacity: 0.82;
+}
+
+.submit {
+    width: 100%;
+}
+
+.links {
+    margin-bottom: 15px;
+}
+
+/*********nav*****************/
+
+.nav {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    position: sticky;
+    top: 0;
+}
+
+.avatar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--bg-color-sup);
+    color: #000;
+    gap: 5px;
+}
+
+
+
+.right-links .avatar {
+    padding-top: 10px;
+}
+
+.user-img {
+    object-fit: cover;
+}
+
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+
+}
+
+.fa-logo {
+    content: url("/static/svg/logo.svg");
+}
+
+
+.logo a {
+    text-decoration: none;
+    color: #000;
+
+}
+
+.right-links {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #f1f1f1;
+}
+
+.right-links a {
+    padding: 0 10px;
+}
+
+.status {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    color: black;
+    /* White text color for links */
+    text-decoration: none;
+    /* Remove underlines from links */
+}
+
+form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    /* Add some space below forms */
+}
+/* Post styles */
+.Thepost {
+    gap: 10px;
+    width: 55%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    /* White background color */
+    padding: 20px;
+    margin-bottom: 20px;
+    /* Add some space below the post */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add shadow effect */
+}
+.message {
+    border-bottom: 1px solid rgb(173, 170, 170);
+    overflow: auto;
+    max-height: 500px;
+}
+
+.commentaryy {
+    max-height: 500px;
+    overflow: auto;
+}
+
+.responses {
+    gap: 10px;
+    width: 55%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    /* White background color */
+    padding: 20px;
+    margin-bottom: 20px;
+    /* Add some space below the post */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add shadow effect */
+}
+
+.responses form {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px   ;
+}
+
+textarea {
+    width: 70%;
+    height: 150px;
+    resize: none;
+}
+
+.user {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 1px solid rgb(173, 170, 170);
+    padding-left: 10px;
+}
+
+
+svg {
+    height: 30px;
+    width: 30px;
+    fill: #666;
+}
+
+/* Comment section styles */
+.comments {
+    display: flex;
+    flex-direction: column  ;
+    width: 55%;
+    border-radius: 20px;
+    background-color: #fff;
+    /* White background color */
+    padding: 20px;
+    margin-bottom: 20px;
+    /* Add some space below the comments */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add shadow effect */
+}
+
+.comments h1 {
+    margin-top: 0;
+    /* Remove margin from the top */
+}
+
+.white {
+    position: fixed;
+    width: 150%;
+    background-color: rgb(231, 233, 237);
+    top: 80%;
+    left: -50px;
+    height: 100vh;
+    z-index: -1;
+    transform: rotate(20deg);
+    border-radius: 500px;
+}
+
+.commentary {
+    display: flex;
+    flex-direction: column  ;
+    width: 55%;
+    border-radius: 20px;
+    background-color: #fff;
+    /* White background color */
+    padding: 20px;
+    margin-bottom: 20px;
+    /* Add some space below the comments */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add shadow effect */
+}
+.userinfo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Form styles */
+
+.responses input {
+    height: 35px;
+    background: #4F46E5;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .3s;
+    margin-top: 10px;
+    padding: 0px 10px;
+}
+
+.responses input:hover {
+    background: #938ef8;
+}
+/* Button styles */
+button {
+    display: flex;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

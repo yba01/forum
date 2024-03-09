@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: grid;
+    flex-direction: column;
+    position: relative;
+    line-height: 1.8;
+    font-size: 14px;
+    min-height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #4F46E5;
+    font-size: 14px;
+}
+
+/* ------nav bar */
+
+.nav {
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 60px;
+    z-index: 100;
+    height: 65px;
+    width: 100%;
+    position: fixed;
+
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    margin-left: 10px;
+
+}
+
+.logo a {
+    text-decoration: none;
+    color: #000;
+
+}
+
+
+.right-links {
+    justify-content: center;
+}
+
+.right-links a {
+    padding: 0 10px;
+}
+
+.right-links ul {
+    display: flex;
+}
+
+
+.btn {
+    height: 35px;
+    background: #4F46E5;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .3s;
+    margin-top: 10px;
+    padding: 0px 10px;
+}
+
+.btn-log {
+    background: white;
+    color: black;
+    font-size: 16px;
+}
+
+.fa-user {
+    content: url("/static/svg/user.svg");
+    width: 16px;
+    margin-right: 6px;
+}
+
+.fa-logo {
+    content: url("/static/svg/logo.svg");
+}
+
+
+
+
+
+
+/* --------------- */
+
+.forum-container {
+    max-width: 960px;
+    display: grid;
+
+}
+
+
+
+.header {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    height: auto;
+    display: flex;
+    margin-top: 70px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.header-cont {
+    width: 100%;
+    display: grid;
+    text-align: center;
+}
+
+.forum-title {
+    font-size: 70px;
+    font-weight: 700;
+
+}
+
+.forum-desc {
+    font-size: 23px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.name-cate {
+    font-weight: bold;
+}
+.create-post {
+    max-width: 200px !important;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 50px !important;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    justify-content: center;
+    background: linear-gradient(45deg, #1da1f2, #0e71c8) !important;
+    display: inline-flex;
+    height: 48px;
+    color: #fff;
+    align-items: center;
+    box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.05);
+    position: relative;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 10px;
+    outline: none !important;
+    cursor: pointer;
+    transition: all .5s ease-in;
+}
+
+.main {
+    display: flex;
+    position: absolute;
+    margin-top: 350px;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    /* background-color: green; */
+    height: 400px;
+
+}
+
+.filters {
+    display: grid;
+    border-radius: 10px;
+    width: 30%;
+    position: absolute;
+    height: auto;
+    padding-left: 20px;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.05);
+
+
+}
+
+.posts {
+
+    display: grid;
+    border-radius: 10px;
+    position: absolute;
+    right: 0;
+    width: 68%;
+    height: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.05);
+
+}
+
+.posts-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    height: 35px;
+    margin-bottom: 5px;
+}
+
+.post {
+    display: block;
+}
+
+.post-info {
+    display: grid;
+
+}
+
+.post-user {
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+
+}
+
+.post-user:hover {
+    background-color: rgb(239, 237, 237);
+}
+
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: -8px;
+    margin-left: 10px;
+}
+
+.categorie {
+    background: linear-gradient(45deg, #1da1f2, #0e71c8);
+    border-radius: 3px;
+    font-size: .8rem;
+    padding: 0 10px;
+    margin-right: 5px;
+    color: white;
+}
+
+.like-dis {
+    display: flex;
+
+}
+
+.white {
+    position: fixed;
+    width: 150%;
+    background-color: rgb(231, 233, 237);
+    top: 80%;
+    left: -50px;
+    height: 100vh;
+    z-index: -1;
+    transform: rotate(20deg);
+    border-radius: 500px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.categorie-list {
+    display: grid;
+    margin-top: -150px;
+}
+
+.list {
+    font-weight: bold;
+    color: #2C3E50;
+    border-radius: 6px;
+    margin-top: 4px;
+    background: white;
+    word-break: break-word;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.list:hover {
+    background-color: rgb(239, 237, 237);
+    ;
+}
+
+.hamburger {
+    display: none;
+    content: url("/static/svg/hamburger.svg");
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    width: 50px;
+}
+
+@media screen and (max-width:990px) {
+
+    .main {
+        display: grid;
+    }
+
+    .filters {
+        width: 100%;
+        transition: 1s;
+    }
+
+    .posts {
+        width: 100%;
+        margin-top: 380px;
+        transition: 0.5s;
+    }
+
+}
+
+@media screen and (max-width:570px) {
+    .posts-title {
+        font-size: 1.0rem;
+        
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .forum-title {
+        font-size: 50px;
+        transition: 1s;
+    }
+
+    .forum-desc {
+        font-size: 16px;
+        transition: 1s;
+    }
+
+    .like-dis {
+        display: none;
+    }
+
+    .right-links {
+        position: absolute;
+        display: grid;
+        width: 100%;
+        padding: 0;
+        top: -300px;
+        height: 150vh;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(5px);
+        margin-left: -100%;
+        transition: all 1s ease;
+
+    }
+
+    .mobile-menu {
+        margin-left: 0;
+    }
+
+    .right-links ul {
+        display: grid;
+    }
+
+    .btn {
+        font-size: 14px;
+        color: black;
+        font-weight: bold;
+    }
+
+    .btn-log {
+        background-color: transparent;
+    }
+
+}

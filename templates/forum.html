@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/forum.css">
+    <title>Forum</title>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo">
+            <i class="fa-logo"></i>
+            <a href="/">Forum</a>
+        </div>
+
+
+        <div class="right-links">
+            <ul style="list-style-type: none;">
+                {{if not .IsConnect}}
+                <li>
+                    <a href="/login"> <button class="btn btn-log"><i class="fa-solid fa-user"></i>Log In</button> </a>
+                </li>
+                <li>
+                    <a href="/register"> <button class="btn btn-reg">Register</button> </a>
+                </li>
+                {{end}}
+                {{if .IsConnect}}
+                <li>
+                    <a href=""> <button class="btn btn-log"><i class="fa-solid fa-user"></i>{{.Username}}</button> </a>
+                </li>
+                <li>
+                    <a href="/logout"> <button class="btn btn-logout">Log Out</button> </a>
+                </li>
+                {{end}}
+            </ul>
+
+
+        </div>
+        <i class="hamburger"></i>
+
+    </div><br>
+    <div class="header">
+        <div class="header-cont">
+            <div class="forum-title">FORUM</div>
+            <div class="forum-desc">ask your question and/or provide help</div>
+            {{if .IsConnect}}
+            <div>
+                <a href="/post" class="create-post">New post</a>
+            </div>
+            {{end}}
+        </div>
+    </div>
+    <div class="forum-container">
+
+        <div class="main">
+            <section class="filters">
+                <div class="posts-title">
+                    Language web
+                </div>
+                <hr>
+                <hr>
+                <div style="margin-top: 10px;">
+                    <div class="list">
+                        <a href="/">All</a>
+                    </div>
+                    {{range .Categories}}
+                    <div class="list">
+                        <a href="forumfilter?id={{.}}">{{.}}</a>
+                    </div>
+                    {{end}}
+                    {{if .IsConnect}}
+                    <hr><hr>
+                    <div class="list">
+                        <a href="/forumfilter?id=createdpost">Created Post</a>
+                    </div>
+                    <div class="list">
+                        <a href="/forumfilter?id=LikedPost">Liked Post</a>
+                    </div>
+                    {{end}}
+                </div>
+            </section>
+            <section class="posts">
+                <div class="posts-title">
+                    Forum
+                </div>
+                <hr>
+                <hr>
+
+
+                <div style="margin-top: 18px; ">
+                    <div class="post">
+                        {{if .ErrorString}}
+                        <div class="post-user">         
+                                <div class="name-cate" >
+                                    <span class="name">{{.ErrorString}}</span>
+                                </div>
+                        </div>       
+                        {{end}}
+                        {{range .Allposts}}
+                        <div class="post-user">
+                            <a href="/forumInfo?id={{.Id}}" class="post-info">
+                                <div class="name-cate">
+                                    <span class="name">{{.Username}}</span>
+                                    {{range .Category}}
+                                    <span class="categorie">{{.}}</span>
+                                    {{end}}
+                                </div>
+                                <div class="title">
+                                    <p>{{.Title}}</p>
+                                </div>
+
+                            </a>
+                        </div>
+                        {{end}}
+                    </div>
+
+                </div>
+
+
+        </div>
+
+
+        </section>
+    </div>
+    <div class="white">
+
+    </div>
+
+    </div>
+</body>
+<script>
+    const menuHamburger = document.querySelector(".hamburger")
+    const navLinks = document.querySelector(".right-links")
+
+    menuHamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('mobile-menu')
+    })
+</script>
+
+</html>
