@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"net/http"
 	"strconv"
+	"strings"
 )
 
 func ForumInfo(w http.ResponseWriter, r *http.Request) {
@@ -99,6 +100,8 @@ func ComentaryInsert(w http.ResponseWriter, r *http.Request) {
 		Error400(w, r)
 		return
 	}
+
+	commentary = strings.Trim(commentary," ")
 
 	_, err = DB.Exec("INSERT INTO comments (user_id, post_id, commentary) VALUES(?, ?, ?)", userID, post_id, commentary)
 	if err != nil {

@@ -3,6 +3,7 @@ package internal
 import (
 	"database/sql"
 	"net/http"
+	"strings"
 
 	"golang.org/x/crypto/bcrypt"
 )
@@ -12,7 +13,7 @@ func Login(w http.ResponseWriter, r *http.Request) {
 		Error500(w, r)
 		return
 	}
-	
+
 	if er := ExeTemp(w, "login.html", nil); er != nil {
 		Error500(w, r)
 	}
@@ -25,9 +26,7 @@ func LoginAuth(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	
-
-	nameInput := r.FormValue("username")
+	nameInput := strings.ToLower(r.FormValue("username"))
 	paswdInput := r.FormValue("password")
 
 	if nameInput == "" || paswdInput == "" {
@@ -60,7 +59,7 @@ func LoginAuth(w http.ResponseWriter, r *http.Request) {
 	}
 	//--------------------------user is connected------------------------------------------------------//
 	c, _ := r.Cookie("session_token")
-	
+
 	if c != nil {
 		SessionID := c.Value
 		if IsSessionExit(user, SessionID) {
@@ -70,11 +69,11 @@ func LoginAuth(w http.ResponseWriter, r *http.Request) {
 
 		DeleteSession(SessionID)
 	}
-	
+
 	// ExeTemp(w, "login.html", data{ErrorAlert: "SessExist2"})
-	
+
 	DeleteSession2(user.ID)
-	
+
 	// create a session token
 	err3 := SessionStart(user, w) // start the session
 	if err3 != nil {

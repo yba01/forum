@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"net/http"
 	"strconv"
+	"strings"
 )
 
 // The Post function handles POST requests, checks for errors, authenticates users, refreshes sessions,
@@ -79,6 +80,9 @@ func PostSubmit(w http.ResponseWriter, r *http.Request) {
 		Error400(w, r)
 		return
 	}
+
+	title = strings.Trim(title," ")
+	message =  strings.Trim(message," ")
 
 	var category_id string
 	for _, id := range category {
