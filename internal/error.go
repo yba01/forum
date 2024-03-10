@@ -91,3 +91,13 @@ func Error(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func onlySpace(s string) bool {
+	count := 0
+	for _, v := range s {
+		if v == ' ' {
+			count++
+		}
+	}
+	return count == len(s)
+}
+

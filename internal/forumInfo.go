@@ -95,7 +95,7 @@ func ComentaryInsert(w http.ResponseWriter, r *http.Request) {
 
 	commentary := r.FormValue("commentary")
 
-	if commentary == "" {
+	if commentary == "" || onlySpace(commentary){
 		Error400(w, r)
 		return
 	}
